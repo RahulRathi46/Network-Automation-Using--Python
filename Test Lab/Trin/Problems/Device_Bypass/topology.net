@@ -1,0 +1,78 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7200]
+    workingdir = /tmp
+    udp = 10001
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3725
+        console = 2104
+        aux = 2504
+        f0/0 = SW2 2
+        slot1 = NM-1FE-TX
+        f1/0 = R3 f2/0
+        x = 420.0
+        y = -151.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3725
+        console = 2101
+        aux = 2501
+        f0/0 = SW1 2
+        x = -444.0
+        y = -7.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3725
+        console = 2102
+        aux = 2502
+        f0/0 = SW2 3
+        f0/1 = SW1 1
+        x = -70.0
+        y = -3.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3725
+        console = 2103
+        aux = 2503
+        f0/0 = SW2 1
+        slot1 = NM-1FE-TX
+        f1/0 = SW1 3
+        slot2 = NM-1FE-TX
+        f2/0 = R4 f1/0
+        x = 146.0
+        y = -214.0
+        z = 1.0
+    [[ETHSW SW1]]
+        1 = access 1 R2 f0/1
+        2 = access 1 R1 f0/0
+        3 = access 1 R3 f1/0
+        x = -257.5
+        y = 3.0
+        z = 1.0
+    [[ETHSW SW2]]
+        1 = access 1 R3 f0/0
+        2 = access 1 R4 f0/0
+        3 = access 1 R2 f0/0
+        x = 140.5
+        y = 8.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[SHAPE 1]]
+        type = rectangle
+        x = 84.0
+        y = -36.0
+        width = 200.0
+        height = 100.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -298.0
+        y = -35.0
+        width = 154.0
+        height = 100.0

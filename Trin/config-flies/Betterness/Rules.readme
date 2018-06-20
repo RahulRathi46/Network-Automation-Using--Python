@@ -1,0 +1,19 @@
+host selection is like :
+
+basce /Node 1 = host0
+node 1 = host1
+node 2 = host2
+
+password :
+
+user_pass(node_no)=(usermode pass)
+
+example :
+
+host1_config:
+
+user_pass1=r1
+
+
+
+

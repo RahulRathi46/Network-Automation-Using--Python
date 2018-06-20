@@ -1,0 +1,138 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7202]
+    workingdir = /tmp/GNS3_Remrtb/working
+    udp = 10201
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        model = 3725
+        console = 2109
+        aux = 2509
+        f0/0 = R10 f0/1
+        f0/1 = R5 f0/0
+        slot1 = NM-4T
+        s1/0 = R3 s1/1
+        s1/1 = R4 s1/0
+        x = -99.0
+        y = 211.0
+        z = 1.0
+    [[ROUTER R10]]
+        model = 3725
+        console = 2110
+        aux = 2510
+        f0/0 = R7 f0/1
+        f0/1 = R9 f0/0
+        x = 454.0
+        y = 212.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = /tmp/GNS3_Remrtb/working
+    udp = 10001
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3725
+        console = 2104
+        aux = 2504
+        f0/1 = R1 f1/0
+        slot1 = NM-4T
+        s1/0 = R9 s1/1
+        s1/1 = R5 s1/2
+        x = -405.0
+        y = -30.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3725
+        console = 2101
+        aux = 2501
+        f0/0 = R2 f0/0
+        f0/1 = R3 f0/1
+        slot1 = NM-1FE-TX
+        f1/0 = R4 f0/1
+        x = -575.0
+        y = -81.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3725
+        console = 2102
+        aux = 2502
+        f0/0 = R1 f0/0
+        slot1 = NM-4T
+        s1/0 = R6 s1/2
+        x = -372.0
+        y = -212.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3725
+        console = 2103
+        aux = 2503
+        f0/1 = R1 f0/1
+        slot1 = NM-4T
+        s1/1 = R9 s1/0
+        x = -578.0
+        y = 180.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = /tmp/GNS3_Remrtb/working
+    udp = 10101
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        model = 3725
+        console = 2105
+        aux = 2505
+        f0/0 = R9 f0/1
+        slot1 = NM-4T
+        s1/0 = R7 s1/1
+        s1/1 = R6 s1/0
+        s1/2 = R4 s1/1
+        x = 44.0
+        y = 11.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3725
+        console = 2106
+        aux = 2506
+        slot1 = NM-4T
+        s1/0 = R5 s1/1
+        s1/1 = R8 s1/0
+        s1/2 = R2 s1/0
+        x = 57.0
+        y = -195.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3725
+        console = 2107
+        aux = 2507
+        f0/1 = R10 f0/0
+        slot1 = NM-4T
+        s1/0 = R8 s1/1
+        s1/1 = R5 s1/0
+        x = 290.0
+        y = 29.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3725
+        console = 2108
+        aux = 2508
+        slot1 = NM-4T
+        s1/0 = R6 s1/1
+        s1/1 = R7 s1/0
+        x = 310.0
+        y = -188.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs

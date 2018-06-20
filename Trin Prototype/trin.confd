@@ -1,0 +1,13 @@
+[Get_state]
+route = show route
+ip_interface = show ip interface brief
+running-config = show running-config
+startup-config = show startup-config
+
+
+
+
+[Save_change]
+to_startup-config = copy running-config startup-config
+to_running-config = copy startup-config running-config
+to_tftp =

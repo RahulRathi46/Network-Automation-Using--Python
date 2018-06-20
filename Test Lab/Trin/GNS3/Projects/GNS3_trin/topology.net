@@ -1,0 +1,146 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7200]
+    workingdir = working
+    udp = 10001
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        idlepc = 0x60bf8ba0
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3725
+        console = 2104
+        aux = 2504
+        cnfg = configs/R4.cfg
+        f0/0 = R2 f0/1
+        f0/1 = R5 f0/1
+        slot1 = NM-4T
+        x = -209.410642225
+        y = -215.343145751
+        z = 1.0
+    [[ROUTER R5]]
+        model = 3725
+        console = 2105
+        aux = 2505
+        cnfg = configs/R5.cfg
+        f0/1 = R4 f0/1
+        slot1 = NM-4T
+        x = -40.0
+        y = -226.192388155
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3725
+        console = 2106
+        aux = 2506
+        cnfg = configs/R6.cfg
+        slot1 = NM-4T
+        s1/0 = R1 s1/0
+        x = -579.0
+        y = 59.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3725
+        console = 2101
+        aux = 2501
+        cnfg = configs/R1.cfg
+        f0/0 = nio_tap:tap0
+        f0/1 = R2 f0/0
+        slot1 = NM-4T
+        s1/0 = R6 s1/0
+        x = -562.0
+        y = -98.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3725
+        console = 2102
+        aux = 2502
+        cnfg = configs/R2.cfg
+        f0/0 = R1 f0/1
+        f0/1 = R4 f0/0
+        slot1 = NM-4T
+        x = -351.765981284
+        y = -178.936074863
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    workdir = working
+    m11 = 1.41421356237
+    m22 = 1.41421356237
+    [[NOTE 1]]
+        text = "f0/0"
+        x = -49.7049595642
+        y = 3.388430434
+        interface = R2 f0/0
+        color = "#3c3c3c"
+    [[NOTE 2]]
+        text = "f0/1"
+        x = 32.6449169617
+        y = -57.1504791891
+        interface = R2 f0/1
+        color = "#3c3c3c"
+    [[NOTE 3]]
+        text = "f0/1"
+        x = 74.7049595642
+        y = 7.611569566
+        interface = R1 f0/1
+        color = "#3c3c3c"
+    [[NOTE 4]]
+        text = "f0/0"
+        x = -17.6279230749
+        y = -30.9982694471
+        interface = R1 f0/0
+        color = "#3c3c3c"
+    [[NOTE 5]]
+        text = "s1/0"
+        x = -25.5083424749
+        y = 51.8702738031
+        interface = R1 s1/0
+        color = "#3c3c3c"
+    [[NOTE 6]]
+        text = "s1/0"
+        x = -20.4916575251
+        y = -30.8702738031
+        interface = R6 s1/0
+        color = "#3c3c3c"
+    [[NOTE 7]]
+        text = "f0/1"
+        x = -46.4996944824
+        y = -7.306673909
+        interface = R5 f0/1
+        color = "#3c3c3c"
+    [[NOTE 8]]
+        text = "f0/1"
+        x = 79.4996944824
+        y = -4.693326091
+        interface = R4 f0/1
+        color = "#3c3c3c"
+    [[NOTE 9]]
+        text = "f0/0"
+        x = -48.6449169617
+        y = 43.1504791891
+        interface = R4 f0/0
+        color = "#3c3c3c"
+    [[NOTE 10]]
+        text = "nio_tap:tap0"
+        x = 41.1279230749
+        y = 24.9982694471
+        interface = C1 nio_tap:tap0
+        color = "#3c3c3c"
+    [[Cloud C1]]
+        x = -604.5
+        y = -297.0
+        z = 1.0
+        connections = R1:f0/0:nio_tap:tap0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -620.0
+        y = -140.485281374
+        width = 178.76536854
+        height = 269.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -377.595021154
+        y = -258.0
+        width = 424.595021154
+        height = 160.419264196

@@ -1,0 +1,212 @@
+autostart = False
+version = 0.8.7
+[127.0.0.1:7202]
+    workingdir = /tmp
+    udp = 10201
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R12]]
+        model = 3725
+        console = 2122
+        aux = 2522
+        f0/0 = R13 f0/1
+        f0/1 = R11 f0/0
+        x = 299.0
+        y = -13.0
+        z = 1.0
+    [[ROUTER R10]]
+        model = 3725
+        console = 2120
+        aux = 2520
+        f0/1 = R9 f0/0
+        x = 335.0
+        y = -164.0
+        z = 1.0
+    [[ROUTER R11]]
+        model = 3725
+        console = 2121
+        aux = 2521
+        f0/0 = R12 f0/1
+        slot1 = NM-4T
+        s1/1 = R6 s1/0
+        x = 185.0
+        y = -11.0
+        z = 1.0
+    [[ROUTER R9]]
+        model = 3725
+        console = 2119
+        aux = 2519
+        f0/0 = R10 f0/1
+        f0/1 = R8 f0/0
+        slot1 = NM-4T
+        x = 193.0
+        y = -165.0
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = /tmp
+    udp = 10301
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R16]]
+        model = 3725
+        console = 2126
+        aux = 2526
+        f0/1 = R15 f0/0
+        slot1 = NM-4T
+        x = 360.0
+        y = 165.0
+        z = 1.0
+    [[ROUTER R14]]
+        model = 3725
+        console = 2124
+        aux = 2524
+        f0/0 = R15 f0/1
+        slot1 = NM-4T
+        s1/1 = R7 s1/0
+        x = 65.0
+        y = 160.0
+        z = 1.0
+    [[ROUTER R15]]
+        model = 3725
+        console = 2125
+        aux = 2525
+        f0/0 = R16 f0/1
+        f0/1 = R14 f0/0
+        x = 215.0
+        y = 163.0
+        z = 1.0
+    [[ROUTER R13]]
+        model = 3725
+        console = 2123
+        aux = 2523
+        f0/1 = R12 f0/0
+        x = 409.0
+        y = -10.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = /tmp
+    udp = 10001
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        model = 3725
+        console = 2114
+        aux = 2514
+        f0/0 = R6 f0/1
+        slot1 = NM-4T
+        s1/0 = R1 s1/1
+        x = -283.0
+        y = -1.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3725
+        console = 2113
+        aux = 2513
+        f0/0 = R5 f0/1
+        slot1 = NM-4T
+        s1/1 = R1 s1/0
+        x = -330.0
+        y = -240.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3725
+        console = 2112
+        aux = 2512
+        f0/0 = R7 f0/1
+        slot1 = NM-4T
+        s1/0 = R1 s1/2
+        x = -348.0
+        y = 250.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3725
+        console = 2111
+        aux = 2511
+        slot1 = NM-4T
+        s1/0 = R3 s1/1
+        s1/1 = R4 s1/0
+        s1/2 = R2 s1/0
+        x = -578.0
+        y = 6.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = /tmp
+    udp = 10101
+    [[3725]]
+        image = /media/vx/Free/Images/GNS3 IOS/c3725-adventerprisek9-mz124-15.image
+        ram = 256
+        idlepc = 0x60264f28
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R8]]
+        model = 3725
+        console = 2118
+        aux = 2518
+        f0/0 = R9 f0/1
+        slot1 = NM-4T
+        s1/0 = R5 s1/0
+        x = 46.0
+        y = -167.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3725
+        console = 2117
+        aux = 2517
+        f0/1 = R2 f0/0
+        slot1 = NM-4T
+        s1/0 = R14 s1/1
+        x = -176.0
+        y = 253.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3725
+        console = 2116
+        aux = 2516
+        f0/1 = R4 f0/0
+        slot1 = NM-4T
+        s1/0 = R11 s1/1
+        x = -109.0
+        y = 2.0
+        z = 1.0
+    [[ROUTER R5]]
+        model = 3725
+        console = 2115
+        aux = 2515
+        f0/1 = R3 f0/0
+        slot1 = NM-4T
+        s1/0 = R8 s1/0
+        x = -170.0
+        y = -240.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[SHAPE 1]]
+        type = rectangle
+        x = 54.0
+        y = 130.0
+        width = 379.0
+        height = 100.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = 165.0
+        y = -43.0
+        width = 320.0
+        height = 100.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = 32.0
+        y = -205.0
+        width = 376.0
+        height = 111.0
